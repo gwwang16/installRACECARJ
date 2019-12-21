@@ -43,11 +43,11 @@ We’re now ready to install the Robot Operating System (ROS) software and the r
 
 - The MIT RACECAR packages are installed, which includes the ZED v2.2.x ROS wrapper.
 
-**To start the installation **
+**To start the installation**
 
 -------
 
-### NOTE :  use installMITRACECAR.sh for earlier 4.X version VESC hardware
+### use installMITRACECAR.sh for earlier 4.X version VESC hardware
 
 ```
 $ ./installMITRACECARVESC6.sh
@@ -60,6 +60,12 @@ $ ./installMITRACECARVESC6.sh |& tee softinstall.log
 ```
 
 The log will be placed in the file `softinstall.log` for review. This is useful in case there are installation issues.
+
+After all these finished, you might want to reboot your device to make these settings work.
+
+```
+sudo shutdown -r now
+```
 
 ### Note
 Worth noting is that the scripts also set up two environment variables in the .bashrc, namely ROS_MASTER_URI and ROS_IP. These are placeholders, you should replace them with values appropriate to your network layout. Also, while the normal ROS setup.bash is sourced, you may want to source the devel/setup.bash of your workspace.
