@@ -1,4 +1,4 @@
-# Alias the Sparkfun 9DoF as imu, and the electronic speed controller as VESC
+# Alias the Sparkfun 9DoF as imu, electronic speed controller as vesc, and RP Lidar A3 as rplidar, etc.
 ACTION=="add", ATTRS{idVendor}=="1b4f", ATTRS{idProduct}=="9d0f", SYMLINK+="imu"
 ACTION=="add", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="5740", SYMLINK+="vesc"
 ACTION=="add", ATTRS{idVendor}=="045e", ATTRS{idProduct}=="0291", SYMLINK+="xbox360"

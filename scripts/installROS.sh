@@ -2,7 +2,7 @@
 # Install Robot Operating System (ROS) on NVIDIA Jetson TX2
 # Maintainer of ARM builds for ROS is http://answers.ros.org/users/1034/ahendrix/
 # Information from:
-# http://wiki.ros.org/kinetic/Installation/UbuntuARM
+# http://wiki.ros.org/melodic/Installation/Ubuntu
 
 # Setup sources.lst
 sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -cs` main" > /etc/apt/sources.list.d/ros-latest.list'
@@ -10,29 +10,29 @@ sudo sh -c '. /etc/lsb-release && echo "deb http://mirrors.tuna.tsinghua.edu.cn/
 sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 # Installation
 sudo apt-get update
-sudo apt-get install ros-kinetic-ros-base -y
+sudo apt-get install ros-melodic-ros-base -y
 # Add Individual Packages here
 # You can install a specific ROS package (replace underscores with dashes of the package name):
-# sudo apt-get install ros-kinetic-PACKAGE
+# sudo apt-get install ros-melodic-PACKAGE
 # e.g.
-# sudo apt-get install ros-kinetic-navigation
+# sudo apt-get install ros-melodic-navigation
 #
 # To find available packages:
-# apt-cache search ros-kinetic
+# apt-cache search ros-melodic
 # 
 # Initialize rosdep
-sudo apt-get install python-rosdep -y
-# Certificates are messed up on the Jetson for some reason
-sudo c_rehash /etc/ssl/certs
+# sudo apt-get install python-rosdep -y
+# # Certificates are messed up on the Jetson for some reason
+# sudo c_rehash /etc/ssl/certs
 # Initialize rosdep
 sudo rosdep init
 # To find available packages, use:
 rosdep update
-# Environment Setup - Don't add /opt/ros/kinetic/setup.bash if it's already in bashrc
-grep -q -F 'source /opt/ros/kinetic/setup.bash' ~/.bashrc || echo "source /opt/ros/kinetic/setup.bash" >> ~/.bashrc
+# Environment Setup - Don't add /opt/ros/melodic/setup.bash if it's already in bashrc
+grep -q -F 'source /opt/ros/melodic/setup.bash' ~/.bashrc || echo "source /opt/ros/melodic/setup.bash" >> ~/.bashrc
 source ~/.bashrc
-# Install rosinstall
-sudo apt-get install python-rosinstall -y
+# Install dependencies for building ROS packages
+sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential -y
 #setup ROS environment variables
 grep -q -F ' ROS_MASTER_URI' ~/.bashrc ||  echo 'export ROS_MASTER_URI=http://localhost:11311' | tee -a ~/.bashrc
 grep -q -F ' ROS_IP' ~/.bashrc ||  echo "export ROS_IP=$(hostname -I)" | tee -a ~/.bashrc

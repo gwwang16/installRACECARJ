@@ -1,6 +1,11 @@
 # installRACECARJ
 
-<em>Dec, 2019</em>
+<em>Dec 28, 2019</em>
+Update scripts for Jetpack 4.3 L4T 32.3.1.
+- update to ROS Melodic
+- Update ZED driver 
+
+<em>Dec 22, 2019</em>
 
 Scripts in this repository will install ROS and the MIT RACECAR packages on a NVIDIA Jetson Development Kit.
 
@@ -39,7 +44,7 @@ We’re now ready to install the Robot Operating System (ROS) software and the r
 
 - ROS is configured and rosbase is installed
 
-- One of the dependencies is missing in the package specifications, so ros-kinetic-opencv3 is installed.
+- One of the dependencies is missing in the package specifications, so ros-melodic-opencv3 is installed.
 
 - The MIT RACECAR packages are installed, which includes the ZED v2.2.x ROS wrapper.
 
@@ -73,6 +78,7 @@ Worth noting is that the scripts also set up two environment variables in the .b
 You will need to modify these environment variables to match your needs and network layout.
 
 ### Release Notes
+
 Dec. 2019
 * update ZED driver
 * modify ROS source to Chinese mirror
