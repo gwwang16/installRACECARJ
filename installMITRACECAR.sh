@@ -5,7 +5,7 @@
 # Includes ROS installation
 
 # L4T 28.1 does not have a cdc-acm driver
-# ./scripts/installCDCACM.sh
+./scripts/installCDCACM.sh
 
 # Setup the UDEV rules for the ESC and IMU
 ./scripts/installRACECARUdev.sh
