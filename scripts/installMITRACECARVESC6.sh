@@ -20,7 +20,7 @@ else
 fi
 cd "$DEFAULTDIR"
 
-wget -q https://raw.githubusercontent.com/gwwang16/racecar/VESC6/racecar.rosinstall -O "$DEFAULTDIR"/.rosinstall
+wget -q https://raw.githubusercontent.com/gwwang16/installRACECARJ/master/data/racecar-VESC6.rosinstall -O "$DEFAULTDIR"/.rosinstall
 
 wstool update
 
@@ -32,6 +32,8 @@ rosdep install -a -y -r
 # jstest-gtk is added for testing the joystick
 sudo apt-get -y install \
     jstest-gtk 
+# One of the dependencies is missing, ackermann-msgs for ros
+sudo apt-get install ros-kinetic-ackermann-msgs -y
 
 echo "Catkin Make"
 # On the Jetson, there's currently an issue with using the dynamic runtime
