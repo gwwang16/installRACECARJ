@@ -21,7 +21,7 @@ $ cd installRACECARJ
 Next, install the appropriate ZED camera driver for the Jetson in use. If possible, plug the ZED camera into the RACECAR/J USB hub (in one of the FAST ports, they are full speed USB 3.0). If the ZED is present during installation, the ZED driver installer will download the cameras’ calibration file. To install the Jetson TX2 driver for example:
 
 ```
-$ cd JetsonTX2
+$ cd scripts
 $ ./installZED-SDK-TX2.sh
 ```
 

@@ -1,5 +1,5 @@
 #!/bin/bash
-# Download the Stereolabs SDK for the Jetson TX2 (JetPack 3.3.1 version, CUDA 9.0)
+# Download the Stereolabs SDK for the Jetson TX1/TX2 (JetPack 3.3 version, CUDA 9.0)
 # Then run the installer
 echo " "
 echo "Downloading and installing the Stereolabs ZED SDK version 2.8.4"

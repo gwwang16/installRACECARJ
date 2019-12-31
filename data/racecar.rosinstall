@@ -1,0 +1,6 @@
+- git: {local-name: src/racecar,               version: RacecarJTransitory,        uri: 'https://github.com/RacecarJ/racecar.git'}
+- git: {local-name: src/vesc,                  version: RacecarJTransitory,        uri: 'https://github.com/RacecarJ/vesc.git'}
+- git: {local-name: src/racecar-controllers,   version: master,                    uri: 'https://github.com/RacecarJ/racecar-controllers.git'}
+- git: {local-name: src/zed-ros-wrapper,       version: v2.8.x,                    uri: 'https://github.com/stereolabs/zed-ros-wrapper.git'}
+- git: {local-name: src/rplidar_ros,           version: master,                    uri: 'https://github.com/Slamtec/rplidar_ros.git'}
+

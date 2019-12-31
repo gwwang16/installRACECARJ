@@ -33,6 +33,9 @@ rosdep install -a -y -r
 sudo apt-get -y install \
     jstest-gtk 
 
+# One of the dependencies is missing, ackermann-msgs for ros
+sudo apt-get install ros-kinetic-ackermann-msgs -y
+
 echo "Catkin Make"
 # On the Jetson, there's currently an issue with using the dynamic runtime
 # Typically this reports as "cannot find -lopencv_dep_cudart" in the error log

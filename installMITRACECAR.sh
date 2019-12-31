@@ -1,10 +1,13 @@
 #!/bin/bash
 # Install the MIT RACECAR software
-# This is for NVIDIA Jetson L4T 28.1
+# This is for NVIDIA Jetson L4T 28.3
 # This will install the whole software stack for the MIT RACECAR
 # Includes ROS installation
 
-# L4T 28.1 does not have a cdc-acm driver
+# Install ZED driver
+# ./scripts/installZED-SDK-TX2.sh
+
+# L4T 28.3 does not have a cdc-acm driver
 ./scripts/installCDCACM.sh
 # Setup the UDEV rules for the ESC and IMU
 ./scripts/installRACECARUdev.sh

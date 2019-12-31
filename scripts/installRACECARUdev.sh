@@ -4,6 +4,5 @@
 # Electronic Speed Controller as VESC
 sudo cp ./data/10-racecar.rules /etc/udev/rules.d
 # Reread the rules; You may need to physically replug
-sudo udevadm control --reload-rules 
-sudo udevadm trigger
+sudo udevadm control --reload-rules && udevadm trigger
 echo 'RACECAR Rules installed'
