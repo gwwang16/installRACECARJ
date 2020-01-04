@@ -4,7 +4,7 @@
 
 Scripts in this repository will install ROS and the MIT RACECAR packages on a NVIDIA Jetson Development Kit.
 
-This version is for L4T 28.3.1. The scripts assume that the Jetson has been freshly flashed with L4T 28.3.1 using JetPack 3.3.1.
+This version is for L4T 28.3.2. The scripts assume that the Jetson has been freshly flashed with L4T 28.3.2 using JetPack 3.3.2.
 
 
 <em>Note that this repository is currently under heavy development, and is subject to change soon.
@@ -33,7 +33,7 @@ $ cd ..
 
 We’re now ready to install the Robot Operating System (ROS) software and the rest of the RACECAR/J software stack. The installation script does the following:
 
-- L4T 28.1 does not have a cdc-acm driver. The script installs a pre-built cdc-acm driver. The driver expects a stock kernel (4.4.38-tegra)
+- L4T 28.3 does not have a cdc-acm driver. The script installs a pre-built cdc-acm driver. The driver expects a stock kernel (4.4.38-tegra)
 
 - Because the electronic speed controller and the IMU both report as ttyACM, a udev rule is installed which names them as vesc and imu respectively.
 
@@ -47,16 +47,16 @@ We’re now ready to install the Robot Operating System (ROS) software and the r
 
 -------
 
-### use installMITRACECAR.sh for earlier 4.X version VESC hardware
+**use installMITRACECARVESC6.sh for newer 6 PLUS version VESC hardware**
 
 ```
-$ ./installMITRACECARVESC6.sh
+$ ./installMITRACECAR.sh
 ```
 
 The directory ‘~/racecar-ws’ is the default workspace directory name; it can be specified on the command line after the script name. Because there is such a large amount of messages during installation, you may want to log everything to a log file:
 
 ```
-$ ./installMITRACECARVESC6.sh |& tee softinstall.log
+$ ./installMITRACECAR.sh |& tee softinstall.log
 ```
 
 The log will be placed in the file `softinstall.log` for review. This is useful in case there are installation issues.
